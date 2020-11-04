@@ -36,6 +36,7 @@ pip install dist/*.whl
 jupyter labextension link --no-build packages/application/
 jupyter labextension link --no-build packages/ui-components/
 jupyter labextension link --no-build packages/metadata-common/
+jupyter labextension install @bokeh/jupyter_bokeh @jupyter-widgets/jupyterlab-manager @jupyter-voila/jupyterlab-preview @arbennett/base16-nord @jupyterlab/geojson-extension  @jupyterlab/git @jupyterlab/katex-extension @jupyterlab/latex @jupyterlab/shortcutui bqplot dask-labextension jupyter-vuetify jupyterlab-chart-editor jupyterlab-dash jupyterlab-skip-traceback nbdime-jupyterlab @krassowski/jupyterlab_go_to_definition @lckr/jupyterlab_variableinspector  @osscar/jupyterlab-hide-code @pyviz/jupyterlab_pyviz @techrah/text-shortcuts
 jupyter lab build --dev-build=False --minimize=False --debug
 
 mkdir -p binder-demo
@@ -73,3 +74,5 @@ cp $EXAMPLES_BASE_DIR/binder/getting-started/code-snippets/*.json $CODE_SNIPPETS
 
 # (5) Remove cloned examples directory
 rm -rf $EXAMPLES_BASE_DIR
+
+conda install numpy scipy psutil toolz matplotlib dill pandas pandas-profiling partd bokeh dask holoviews seaborn featuretools xeus-python jupyterlab-git scikit-learn scikit-lego
