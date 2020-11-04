@@ -75,4 +75,5 @@ cp $EXAMPLES_BASE_DIR/binder/getting-started/code-snippets/*.json $CODE_SNIPPETS
 # (5) Remove cloned examples directory
 rm -rf $EXAMPLES_BASE_DIR
 
+conda update -n base conda
 conda install numpy scipy psutil toolz matplotlib dill pandas pandas-profiling partd bokeh dask holoviews seaborn featuretools xeus-python jupyterlab-git scikit-learn scikit-lego
